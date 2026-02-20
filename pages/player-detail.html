@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Profile - Tango Football Club</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>Tango Football Club</h1>
+            <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html">Player Roster</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="history.html">Club History</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Gallery ▼</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-group">
+                            <a href="gallery.html?type=videos" class="dropdown-group-title">📹 Videos</a>
+                            <a href="gallery.html?type=videos&sub=matchday" class="dropdown-item">Matchday Videos</a>
+                            <a href="gallery.html?type=videos&sub=champions" class="dropdown-item">2025/26 MOSSL Champions Celebrations</a>
+                        </div>
+                        <div class="dropdown-group">
+                            <a href="gallery.html?type=pictures" class="dropdown-group-title">🖼️ Pictures</a>
+                            <a href="gallery.html?type=pictures&sub=matchday" class="dropdown-item">Matchday Pictures</a>
+                            <a href="gallery.html?type=pictures&sub=champions" class="dropdown-item">2025/26 MOSSL Champions Celebrations</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="player-profile" id="playerProfile"></div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Tango Football Club</p>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/player-detail.js"></script>
+</body>
+</html>

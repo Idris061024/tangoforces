@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Tango Football Club</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <h1>Tango Football Club</h1>
+            <button id="themeToggle" class="theme-btn">🌙 Dark Mode</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="roster.html">Player Roster</a></li>
+                <li><a href="matches.html">Matches</a></li>
+                <li><a href="history.html">Club History</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle active">Gallery ▼</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-group">
+                            <a href="gallery.html?type=videos" class="dropdown-group-title">📹 Videos</a>
+                            <a href="gallery.html?type=videos&sub=matchday" class="dropdown-item">Matchday Videos</a>
+                            <a href="gallery.html?type=videos&sub=champions" class="dropdown-item">2025/26 MOSSL Champions Celebrations</a>
+                        </div>
+                        <div class="dropdown-group">
+                            <a href="gallery.html?type=pictures" class="dropdown-group-title">🖼️ Pictures</a>
+                            <a href="gallery.html?type=pictures&sub=matchday" class="dropdown-item">Matchday Pictures</a>
+                            <a href="gallery.html?type=pictures&sub=champions" class="dropdown-item">2025/26 MOSSL Champions Celebrations</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="gallery-header">
+            <h2 id="galleryTitle">Club Gallery</h2>
+            <p id="galleryDescription">Photos and videos from matches and team events</p>
+        </section>
+
+        <div class="gallery-container">
+            <!-- Videos Dropdown -->
+            <section class="gallery-section">
+                <h3 class="section-title" onclick="toggleSection(event)">📹 Videos</h3>
+                <div class="section-content" style="display: none;">
+                    <div class="subsection">
+                        <h4 class="subsection-title" onclick="toggleSubsection(event)">▶ Matchday Videos</h4>
+                        <div class="gallery-grid subsection-content" id="matchdayVideosGrid" style="display: none;"></div>
+                    </div>
+                    
+                    <div class="subsection">
+                        <h4 class="subsection-title" onclick="toggleSubsection(event)">▶ 2025/26 MOSSL Champions Celebrations</h4>
+                        <div class="gallery-grid subsection-content" id="celebrationsVideosGrid" style="display: none;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pictures Dropdown -->
+            <section class="gallery-section">
+                <h3 class="section-title" onclick="toggleSection(event)">🖼️ Pictures</h3>
+                <div class="section-content" style="display: none;">
+                    <div class="subsection">
+                        <h4 class="subsection-title" onclick="toggleSubsection(event)">▶ Matchday Pictures</h4>
+                        <div class="gallery-grid subsection-content" id="matchdayPicturesGrid" style="display: none;"></div>
+                    </div>
+                    
+                    <div class="subsection">
+                        <h4 class="subsection-title" onclick="toggleSubsection(event)">▶ 2025/26 MOSSL Champions Celebrations</h4>
+                        <div class="gallery-grid subsection-content" id="celebrationsPicturesGrid" style="display: none;"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="lightbox" class="lightbox" style="display: none;">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightboxImage" src="" alt="" style="display:none;">
+            <video id="lightboxVideo" src="" controls style="max-width:90%; max-height:80%; display:none;"></video>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2026 Tango Football Club</p>
+    </footer>
+    <script src="../js/theme.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html>
